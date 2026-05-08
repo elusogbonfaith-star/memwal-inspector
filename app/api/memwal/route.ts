@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ 
           success: true, 
           job_id: job.job_id,
-          blob_id: completed?.blob_id || completed?.blobId || null
+          blob_id: completed?.blob_id || null
         });
       } catch (e) {
         return NextResponse.json({ success: false, error: String(e) });
